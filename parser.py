@@ -71,16 +71,18 @@ def get_translations(word, dict=[0], un=1):
     for each in translations:
         # each = str(each).replace('"', "''")
         without_comments = sub('(<!--.*?-->)', '', str(each))
-        res = without_comments.split('// ')
-        result = res[0].replace('\t', '    ')
+        without_tags = sub('(<sub>.*?</sub>)', '', without_comments)
+        without_tags= sub('(<sup>.*?</sup>)', '', without_tags)
+        res = without_tags.split('// ')
         source = BeautifulSoup(res[1], 'lxml')
         # print(' --- -- - - - ', source)
         dict_name = source.html.body.a.attrs['title']
         dict_link = 'http://slounik.org' + source.html.body.a.attrs['href']
         source = '<a href="%s">%s</a>' % (dict_link, dict_name)
         # print(soup2.prettify())
-        result = result.replace('<li id="li_poszuk">', '')
+        result = res[0].replace('<li id="li_poszuk">', '')
         result = result.replace('<br/>', '\t')
+        result = result.replace('\t', '    ')
         list_of_translations.append([result, source])
 
     # print(len(list_of_translations))
@@ -88,4 +90,4 @@ def get_translations(word, dict=[0], un=1):
     # list of lists kinda[translation | book, it was taken from]
 
 if __name__ == '__main__':
-    print(*get_translations('марка', dict=[2]), sep='\n')
+    print(*get_translations('склад', dict=[2]), sep='\n')
