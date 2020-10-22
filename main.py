@@ -80,7 +80,7 @@ async def search(message: types.message):
     udb.update(user_id, 'current_trnslt', dumps(translations).replace("'", "''"))
     page = 0
     if len(translations) < 1:
-        response = '<code>Не найдено</code>'
+        response = '<code>Not found</code>'
         kb_pref = keyboard.home
     else:
         # print('trans: ', json.dumps(translations))
@@ -91,7 +91,7 @@ async def search(message: types.message):
 
     if message.text[0] == '/':
         await bot.delete_message(user_id, msg_id)
-        await bot.send_message(user_id, '<i>Нет такой команды</i>', parse_mode='HTML')
+        await bot.send_message(user_id, '<i>Command doesnt exist</i>', parse_mode='HTML')
     else:
         try:
             await bot.edit_message_reply_markup(user_id, msg_id - 1, reply_markup=None)
