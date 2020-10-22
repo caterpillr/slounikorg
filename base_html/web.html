@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+                
+<html>
+  <head id="ctl00_ctl00_Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index,follow" />
+    <link rel="stylesheet" href="/ee.css" />
+    <script type="text/javascript" language="JavaScript" src="/ee.js"></script>
+    <script type="text/javascript" src="/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="/jquery.treeview.js"></script>
+    <link rel="stylesheet" href="/jquery.treeview.css" />
+    <meta name="keywords" content="слоўнік, slounik, энцыкляпэдыя, слоўнікі, энцыкляпэдыі, энцыклапедыя, электронная энцыклапедыя, электронная энциклопедия, словарь, словари, dictionary, encyclopedia" />
+    <meta name="description" content="беларускія слоўнікі і энцыкляпэдыі" />
+    <link href="http://slounik.org/news.rss" rel="alternate" type="application/rss+xml" title="RSS" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://slounik.org/searchProvider.xml" title="Пошук па Slounik.org" />
+
+    <title>slounik.org: пошук</title>
+  </head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" rightmargin="0" bottommargin="0">
+
+<!-- header -->
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+        <tbody><tr>
+                <td background="/img/litbgr.gif"><img width="255" height="28" border="0" src="/img/0.gif"></td>
+                <td rowspan="4"><a href="/"><img width="91" height="87" border="0" src="/img/t12.jpg"></a></td>
+                <td width="100%" background="/img/litbgr.gif"><img width="255" height="28" border="0" src="/img/0.gif"></td>
+        </tr>
+        <tr>
+                <td><a href="/"><img width="255" height="19" border="0" src="/img/t11.gif"></a></td>
+                <td background="/img/t22bgr.gif" align="right" rowspan="2"><img width="159" height="42" border="0" align="right" src="/img/t32.gif"></td>
+        </tr>
+        <tr>
+                <td><a href="/"><img width="255" height="23" border="0" src="/img/t21.gif"></a></td>
+        </tr>
+        <tr>
+                <td><img width="253" height="17" border="0" src="/img/t31.gif"></td>
+                <!-- menu -->
+                <td align="right" rowspan="2" colspan="2">
+                        <table cellspacing="0" cellpadding="0" border="0" align="right">
+                                <tbody><tr>
+										  
+											<!-- halounaje menu -->
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/">Галоўная старонка</a></td>
+											<td><img width="1" height="19" src="/img/m_razd.gif"></td>
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/naviny/">Навіны</a></td>
+											<td><img width="1" height="19" src="/img/m_razd.gif"></td>											
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/about">Пра праект</a></td>
+											<td><img width="1" height="19" src="/img/m_razd.gif"></td>
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/kantakt/">Кантакт</a></td>
+											<td><img width="1" height="19" src="/img/m_razd.gif"></td>
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/spasylki">Спасылкі</a></td>
+											<td><img width="1" height="19" src="/img/m_razd.gif"></td>
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="http://knihi.com/slouniki.html" target="_blank">Кнігі ў PDF/DJVU</a></td>
+											<td><img width="1" height="19" src="/img/m_razd.gif"></td>
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/lat">Канвэртар лацінкі</a></td>
+                      <td><img width="1" height="19" src="/img/m_razd.gif"></td>
+											<td style="padding: 0.3em;text-align:center;"><a class="menu" href="/biblio">Бібліяграфія</a></td>
+											<td><img width="25" height="19" border="0" src="/img/0.gif"></td>
+											<!-- skonczylasia halounaje menu -->
+											
+                                </tr>
+                        </tbody></table>        
+                </td>
+                <!-- skonczylasia menu -->
+        </tr>
+        <tr>
+                <td bgcolor="#ffffff" colspan="2"><img width="10" height="17" border="0" src="/img/0.gif"></td>
+        </tr>
+</tbody></table>
+
+                
+
+<form name="poszuk" id="poszuk" method="GET" action="/search" style="margin: 0">
+  <input type="hidden" value="" name="dict" id="findFormDict">
+  
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#5395f9">
+        <tbody><tr>
+                <td background="/img/posz_bgr1.gif" colspan="4"><img width="10" height="8" border="0" src="/img/0.gif"></td>
+        </tr>
+        <tr>
+                <td colspan="4"><img width="3" height="8" src="/img/0.gif"></td>
+        </tr>
+        <tr>
+                <td align="right" colspan="2" id="colW" class="b10">Шукаць:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" value="трава" onkeyup="storeCaret(this)" onclick="storeCaret(this)" onselect="storeCaret(this)" name="search" class="inptxt" size="65" accesskey="0" id="z">
+				</td>
+                <td width="100%"><img width="10" height="10" src="/img/0.gif"><input type="image" width="53" height="19" border="0" alt="Шукаць" src="/img/b_poszuk.gif"></td>
+        </tr>
+        <tr>
+                <td colspan="2" class="n10">&nbsp;</td>
+                <td>
+                        <table width="100%" cellpadding="0" border="0">
+                                <tbody><tr>
+                                        <td><input type="checkbox" value="1" "checked="on" name="un"></td>
+                                        <td nowrap="" id="colW" class="n10">&nbsp;толькі ў назьве&nbsp;</td>
+                                        
+                                        <td width="100%" class="n10">&nbsp;</td>
+                                        <td><img width="3" height="15" src="/img/lit_razd.gif"></td>
+										<!-- BEGIN_ keyboard -->
+                                        <td><img width="2" height="15" src="/img/0.gif"></td>
+                                        <td><a onclick="window.open('/keyboard.html', 'info', 'toolbar=no, directories=no, scrollbars=no, status=no, resizable=no, width=324, height=109, top=305, left=175');" href="#"><img width="32" height="17" border="0" alt="віртуальная клявіятура" src="/img/keyb.gif"></a></td>
+                                        <td><img width="3" height="15" src="/img/0.gif"></td>
+                                        <td><img width="3" height="15" src="/img/lit_razd.gif"></td>
+										<!-- END keyboard -->
+                                        <td><img width="3" height="15" src="/img/0.gif"></td>
+                                        <td><a onclick="javascript:InsertLetter('і');return false" href=""><img width="17" height="15" border="0" alt="Уставіць беларускае &quot;і&quot;" src="/img/i.gif"></a></td>
+                                        <td><img width="2" height="15" src="/img/0.gif"></td>
+                                        <td><a onclick="javascript:InsertLetter('ў');return false" href=""><img width="17" height="15" border="0" alt="Уставіць у-кароткае (ў)" src="/img/u.gif"></a></td>
+                                        <td><img width="3" height="15" src="/img/0.gif"></td>
+                                        <td><img width="3" height="15" src="/img/lit_razd.gif"></td>
+                                        <td class="n10"><img width="20" height="15" src="/img/0.gif"></td>
+                                </tr>
+                        </tbody></table>
+                </td>
+                <td width="100%" class="n10">&nbsp;</td>
+        </tr>
+        <tr>
+                <td background="/img/posz_bgr2.gif" colspan="4"><img width="10" height="4" border="0" src="/img/0.gif"></td>
+        </tr>
+        <tr>
+                <td><img width="170" height="5" border="0" src="/img/0.gif"></td>
+                <td><img width="5" height="5" border="0" src="/img/tr.gif"></td>
+                <td bgcolor="#ffffff"><img width="200" height="5" border="0" src="/img/0.gif"></td>
+                <td width="100%" bgcolor="#ffffff"><img width="200" height="5" border="0" src="/img/0.gif"></td>
+        </tr>
+
+  </tbody></table>
+</form>
+
+<script type="text/javascript">
+  document.poszuk.search.focus();
+</script>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    
+<tbody>
+
+
+<tr><td align="center" class="header1">
+  <br><font id="bld">Вынікі пошуку</font>
+</td></tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+	
+<tr><td bgcolor="#5cb4f3"><img width="20" height="1" src="/img/0.gif"></td></tr>
+<tr><td nowrap=""><img width="20" height="1" src="/img/0.gif">
+</td></tr>
+<tr><td bgcolor="#5cb4f3"><img width="20" height="1" src="/img/0.gif"></td></tr>
+
+
+
+
+
+
+<tr><td>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+                    <tbody><tr>
+                        <td><img width="20" height="1" src="/img/0.gif"></td>
+                        <td width="99%">
+                            <div class="n11">
+                                <br>
+                                <br>
+                                На ваш запыт <b>трава</b> знойдзены <b>9</b> артыкулаў                                <br>
+                                <br>
+
+                            </div>
+
+  <div id="treeSearch">
+    <li class="treeSearchPart"><a href="/search?un=1&search=трава&dict=sbm|nazounik|dzsl|prym|paronimy|epitety|sinonimyk|bkp2005|tlum|tsbm|slovaklad|prynaz|fraza|starbiel|hsbm|calaviek|zyvioly|rasliny|sielhas|dyjalekt|krajovy|viciebscyna|vusaccyna|lahojsk|paraunanni|roznajes|nb|bulykarb|krapivarb|vlastrb|sanko|rbSauka|lingrb|miedrb|fizyjarb|farmarb|bijarb|lashasrb|ekanamrb|ekanam2rb|fizmat|matrb|cyhunrb|vajskovy|bn|bulykabr|stanbr|krapivabr|biez|miedbr|vierasbr|polisemija|bnt01|bnt02|bnt03|bnt04|bnt05|bnt06a|bnt06b|bnt07|bnt08|bnt09|bnt10|bnt11|bnt12|bnt13|bnt14|bnt15|bnt16|bnt17|bnt18|bnt19|bnt20|bnt21|bnt23|bnt24|bnt25|bnt26|bnt27|bnt28|bnt29|palihrafab|palihrafba|matba|susaab|paskievicab|malyab|pbs|vierasbp|prykazkilb|prykazkiib|ubs|vuhb" style="font-weight: bold;">Усе слоўнікі</a> (20)<ul><li class="closed treeSearchPart"><a href="/search?un=1&search=трава&dict=sbm|nazounik|dzsl|prym|paronimy|epitety|sinonimyk|bkp2005" style="font-weight: bold;">Агульныя</a> (4)<ul><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=sbm" title="Слоўнік беларускай мовы">Слоўнік беларускай мовы</a> (1)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=nazounik" title="Граматычны слоўнік назоўніка">Граматычны назоўніка</a> (1)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=epitety" title="Слоўнік эпітэтаў беларускай мовы">Эпітэты</a> (1)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=sinonimyk" title="Слоўнік сінонімаў і блізказначных слоў">Сінонімы (Клышка)</a> (1)</li></ul><li class="closed treeSearchPart"><a href="/search?un=1&search=трава&dict=calaviek|zyvioly|rasliny|sielhas|dyjalekt|krajovy|viciebscyna|vusaccyna|lahojsk|paraunanni|roznajes" style="font-weight: bold;">Дыялектныя</a> (3)<ul><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=lahojsk" title="Прыказкі Лагойшчыны">Прыказкі Лагойшчыны</a> (2)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=paraunanni" title="Слоўнік беларускіх народных параўнанняў">Беларускія народныя параўнанні</a> (1)</li></ul><li class="closed treeSearchPart"><a href="/search?un=1&search=трава&dict=nb|bulykarb|krapivarb|vlastrb|sanko|rbSauka|lingrb|miedrb|fizyjarb|farmarb|bijarb|lashasrb|ekanamrb|ekanam2rb|fizmat|matrb|cyhunrb|vajskovy" style="font-weight: bold;">Расейска-беларускія</a> (8)<ul><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=nb" title="Расейска-беларускі слоўнік (Некрашэвіч-Байкоў)">Расейска-беларускі (Некрашэвіч-Байкоў)</a> (1)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=krapivarb" title="Расейска-беларускі слоўнік (Крапіва)">Расейска-беларускі (Крапіва)</a> (1)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=sanko" title="Малы расейска-беларускі слоўнік прыказак, прымавак і фразем">Расейска-беларускі прыказак, прымавак і фразем</a> (2)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=rbSauka" title="Расейска-беларускі слоўнік дадатковай лексікі Зьмітра Саўкі">Расейска-беларускі слоўнік дадатковай лексікі</a> (2)</li><li class="treeSearchPart"><a href="/search?un=1&search=трава&dict=lingrb|miedrb|fizyjarb|farmarb|bijarb|lashasrb|ekanamrb|ekanam2rb|fizmat|matrb|cyhunrb|vajskovy" style="font-weight: bold;">Тэрміналягічныя</a> (2)<ul><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=farmarb" title="Кароткі расейска-беларускі фармакалагічны слоўнік">Расейска-беларускі кароткі фармакалагічны</a> (2)</li></ul></ul><li class="closed treeSearchPart"><a href="/search?un=1&search=трава&dict=bn|bulykabr|stanbr|krapivabr|biez|miedbr|vierasbr|polisemija" style="font-weight: bold;">Беларуска-расейскія</a> (1)<ul><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=krapivabr" title="Беларуска-расейскі слоўнік (Крапіва)">Беларуска-расейскі (Крапіва)</a> (1)</li></ul><li class="closed treeSearchPart"><a href="/search?un=1&search=трава&dict=bnt01|bnt02|bnt03|bnt04|bnt05|bnt06a|bnt06b|bnt07|bnt08|bnt09|bnt10|bnt11|bnt12|bnt13|bnt14|bnt15|bnt16|bnt17|bnt18|bnt19|bnt20|bnt21|bnt23|bnt24|bnt25|bnt26|bnt27|bnt28|bnt29" style="font-weight: bold;">Беларуская навуковая тэрміналёгія (БНТ)</a> (4)<ul><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=bnt08" title="Слоўнік лясных тэрмінаў (БНТ)">Слоўнік лясных тэрмінаў (БНТ)</a> (1)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=bnt24" title="Слоўнік тэрміналёгіі агульнае расьлінагадоўлі (праект) (БНТ)">Слоўнік тэрміналёгіі агульнае расьлінагадоўлі (БНТ)</a> (2)</li><li><a class="treeSearchDict" href="/search?un=1&search=трава&dict=bnt25" title="Практычны беларускі вайсковы слоўнік">Практычны беларускі вайсковы слоўнік</a> (1)</li></ul></ul>  </div>
+
+    <script type='text/javascript'>
+      $(document).ready(function(){
+        $("#treeSearch").treeview();
+      });
+    </script>
+
+
+                            <ol type="1" start="1">
+                                <font class="n11">
+
+  <li id="li_poszuk">
+            <b><b>трава</b></b> <b>трава</b>, -вы <i>жен.</i>; <i>(мн. о лечебных травах - ещё)</i> зёлкі, -лак <i>мн.</i><br><b>лечебные травы</b> лекавыя травы (лекавыя зёлкі)<br><b>богородская <b>трава</b></b> <i>бот.</i> чабор<br><b>хоть <b>трава</b> не расти</b> хай хоць <b>трава</b> не расце<br><b><b>трава</b> травой</b> <b>трава</b> травой<br><b>было, травой поросло</b> было, ды сплыло, было, ды быллём парасло<br><b>худую траву с поля вон</b> благую траву з поля вон<br><b>тише воды, ниже травы</b> цішэй вады, ніжэй травы
+      	// <a class="la1" href="/krapivarb" title="Расейска-беларускі слоўнік (Крапіва)">Расейска-беларускі (Крапіва)</a>        </li>
+  <li id="li_poszuk">
+            <b>трав<u>а</u></b> <i>ж.</i> трав<u>а</u>;
+<br>◊ <b>т. ~в<u>о</u>й</b> трав<u>а</u> трав<u>о</u>й;
+<br><b>~в<u>о</u>й зарасц<u>і</u></b> трав<u>о</u>й пораст<u>и</u>;
+<br><b>хоць т. не расц<u>і</u></b> хоть трав<u>а</u> не раст<u>и</u>;
+<br><b>хоць воўк ~в<u>у</u> еш</b> хоть трав<u>а</u> не раст<u>и</u>;
+<br><b>благ<u>у</u>ю ~в<u>у</u> з п<u>о</u>ля вон</b> <i>посл.</i> худ<u>у</u>ю трав<u>у</u> с п<u>о</u>ля вон;
+<br><b>ціш<u>э</u>й вад<u>ы</u>, ніж<u>э</u>й ~в<u>ы</u></b> <i>погов.</i> т<u>и</u>ше вод<u>ы</u>, н<u>и</u>же трав<u>ы</u>      	// <a class="la1" href="/krapivabr" title="Беларуска-расейскі слоўнік (Крапіва)">Беларуска-расейскі (Крапіва)</a>        </li>
+  <li id="li_poszuk">
+            <b>Пока <b>трава</b> зазеленеет, кобыла околеет</b> — Пакуль сонца ўзыдзе, раса вочы выесць = Пакуль тое настане, калом спіна стане = Пакуль да Бога, то чорт душу выйме = Пакуль тое настане, шмат вады сплыве
+      	// <a class="la1" href="/sanko" title="Малы расейска-беларускі слоўнік прыказак, прымавак і фразем">Расейска-беларускі прыказак, прымавак і фразем</a>        </li>
+  <li id="li_poszuk">
+            <b>огуречная <b>трава</b></b> (<i>бораго</i>) бот. храбуст, грабузда *http://cook-book.info/Кулинарный_словарь/1454/Хробуст** гл. СПЗБ      	// <a class="la1" href="/rbSauka" title="Расейска-беларускі слоўнік дадатковай лексікі Зьмітра Саўкі">Расейска-беларускі слоўнік дадатковай лексікі</a>        </li>
+  <li id="li_poszuk">
+            <b>Хоть <b>трава</b> не расти</b> — Няхай хоць воўк траву есць = Няхай хоць выюць чэрці = Хай будзе, што будзе<!---. Гл. 963, 1295, 1296--->
+      	// <a class="la1" href="/sanko" title="Малы расейска-беларускі слоўнік прыказак, прымавак і фразем">Расейска-беларускі прыказак, прымавак і фразем</a>        </li>
+  <li id="li_poszuk">
+            <b>почечуйная <b>трава</b></b> — <i>см.</i> <a href="/156192.html">горец почечуйный</a>
+      	// <a class="la1" href="/farmarb" title="Кароткі расейска-беларускі фармакалагічны слоўнік">Расейска-беларускі кароткі фармакалагічны</a>        </li>
+  <li id="li_poszuk">
+            <b>богородичная <b>трава</b></b> (<i>бот.</i> Saturga L.) — чабор
+      	// <a class="la1" href="/nb" title="Расейска-беларускі слоўнік (Некрашэвіч-Байкоў)">Расейска-беларускі (Некрашэвіч-Байкоў)</a>        </li>
+  <li id="li_poszuk">
+            <b>богородская <b>трава</b></b> — <i>см.</i> <a href="/157458.html">чабрец обыкновенный</a>
+      	// <a class="la1" href="/farmarb" title="Кароткі расейска-беларускі фармакалагічны слоўнік">Расейска-беларускі кароткі фармакалагічны</a>        </li>
+  <li id="li_poszuk">
+            <b><b>трава</b> ◊ зарастать травой</b> <i>несов.</i> травець, травянець 3 ас -ее; <b>зарасти травой</b> <i>сов.</i> утравець, утравянець 3 ас -ее      	// <a class="la1" href="/rbSauka" title="Расейска-беларускі слоўнік дадатковай лексікі Зьмітра Саўкі">Расейска-беларускі слоўнік дадатковай лексікі</a>        </li>
+
+                                </font>
+                            </ol>
+                            <br>
+                        </td>
+                        <td><img width="20" height="1" src="/img/0.gif"></td>
+                    </tr>
+                </tbody></table>
+</td></tr>
+
+  <tr><td bgcolor="#5cb4f3"><img width="20" height="1" src="/img/0.gif"></td></tr>
+
+<tr><td>&nbsp;</td></tr>
+</tbody></table>
+
+
+                
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+	<td valign="top">
+
+		<table cellpadding="0" cellspacing="0" border="0">
+		<tr>
+            <td rowspan="7"><img src="/img/0.gif" height=1 width="20"></td>
+            <td colspan="2"><img src="/img/0.gif" height=1 width="30"></td>
+        </tr>
+		
+        <tr>
+        </tr>
+        <tr>
+            <td colspan="3"><img src="/img/0.gif" height=8 width="15"></td>
+        </tr>
+        
+        <tr>
+			<td><img src="/img/0.gif" height=5 width="10"></td>
+			<td><a href="/"><img src="/img/home.gif" height=26 width="26" border="0" alt="Галоўная старонка"></a></td>
+			<td valign="top">&nbsp;&nbsp;<a href="/" class="t3">Галоўная старонка</a></td>
+
+        </tr>
+        <tr>
+            <td colspan="3"><img src="/img/0.gif" height=25 width="10"></td>
+        </tr>
+        
+		</table>
+	</td>	
+	
+	<td valign="top" align="right">
+						 <table cellpadding="2" cellspacing="0" border="0">
+						 <tr>
+
+						 <td rowspan="2"><a href="/paviedamic" class="t1"><img src="/img/pamylka.gif" width="27" height="23" border="0" alt="Даслаць ліст адміністратару"></a></td>
+						 <td class="n10">Заўважылі недакладнасьць?</td>
+						 <td rowspan="2"><img src="/img/0.gif" width="10" height="1" border="0"></td>
+						 </tr>
+						 <tr>
+						 <td valign="top"><a href="/paviedamic" class="t1" title="Даслаць ліст адміністратару">Паведаміце нам!</a></td>
+						 </tr>
+						 </table>
+
+	</td>
+	
+        </tr>
+</table>
+
+						
+                
+  
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+                <td width="100%" valign="top">
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tbody><tr>
+                                        <td bgcolor="#fd9112"><img width="10" height="3" src="/img/0.gif"></td>
+                                </tr>
+                                <tr>
+                                        <td bgcolor="#ffffff"><img width="10" height="1" src="/img/0.gif"></td>
+                                </tr>
+                                <tr>
+                                        <td bgcolor="#1f349d" background="/img/bt_bgr.gif" class="n10">
+                                                <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                                                        <tbody><tr>
+                                                                <td><img width="20" height="1" src="/img/0.gif"></td>
+																<td style="">
+																</td>
+																<td><img width="1" height="24" src="/img/0.gif"></td>
+                                                                <td width="100%" align="center" id="colW" class="n10">
+                                                                &nbsp;&nbsp;&nbsp; (с) Электронная Энцыкляпэдыя, 2003-2020 &nbsp; 
+                                                                </td>
+                                                        </tr>
+                                                </tbody></table>                                                
+                                        </td>
+                                </tr>
+                        </tbody></table>
+                </td>
+                <td valign="top" bgcolor="#1f349d" rowspan="3"><a href="#top"><img width="32" height="28" border="0" src="/img/top_link.gif"></a></td>
+                <td valign="top" bgcolor="#1f349d" rowspan="3"><img width="58" height="28" src="/img/bt_r.gif"></td>
+        </tr>
+</tbody></table>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4547174-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body></html>
+
+
