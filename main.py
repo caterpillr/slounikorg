@@ -30,7 +30,11 @@ async def start(message: types.message):
     user_data = udb.get_user(user_id)
     if user_data is None:
         udb.add_user(user_id)
-    await bot.delete_message(user_id, msg_id)
+    # I cant delete messages older than 48h
+    try:
+        await bot.delete_message(user_id, msg_id)
+    except:
+        pass
     await bot.send_message(user_id, presets['greeting'], reply_markup=keyboard.home, parse_mode='HTML')
 
 @event.callback_query_handler(lambda c: c.data in ['dict_0', 'dict_1', 'dict_2', 'dict_3', 'poshuk', 'settings'])
@@ -56,7 +60,11 @@ async def settings(callback_query: types.CallbackQuery):
     if callback_query.data != 'settings':
         await bot.edit_message_reply_markup(user_id, msg_id, reply_markup=keyboard.settings)
     else:
-        await bot.delete_message(user_id, msg_id)
+        # I cant delete messages older than 48h
+        try:
+            await bot.delete_message(user_id, msg_id)
+        except:
+            pass
         await bot.send_message(user_id, presets['settings'], reply_markup=keyboard.settings, parse_mode='HTML')
 
 @event.callback_query_handler(lambda c: c.data == 'home')
@@ -64,7 +72,11 @@ async def back_home(callback_query: types.CallbackQuery):
     user_id = callback_query.from_user.id
     msg_id = callback_query.message.message_id
 
-    await bot.delete_message(user_id, msg_id)
+    # I cant delete messages older than 48h
+    try:
+        await bot.delete_message(user_id, msg_id)
+    except:
+        pass
     await bot.send_message(user_id, presets['greeting'], reply_markup=keyboard.home, parse_mode='HTML')
 
 @event.message_handler()
@@ -90,14 +102,23 @@ async def search(message: types.message):
         kb_pref = keyboard.navigate
 
     if message.text[0] == '/':
-        await bot.delete_message(user_id, msg_id)
+        # I cant delete messages older than 48h
+        try:
+            await bot.delete_message(user_id, msg_id)
+        except:
+            pass
         await bot.send_message(user_id, '<i>Command doesnt exist</i>', parse_mode='HTML')
     else:
         try:
             await bot.edit_message_reply_markup(user_id, msg_id - 1, reply_markup=None)
         except Exception as e:
             print('i guess no kb, but caught : ', e)
-        await bot.send_message(user_id, response, reply_markup=kb_pref, parse_mode='HTML', disable_web_page_preview=True)
+        try:
+            await bot.send_message(user_id, response, reply_markup=kb_pref, parse_mode='HTML',
+                                   disable_web_page_preview=True)
+        except:
+            await bot.send_message(user_id, 'response contains an unsupported HTML tag', reply_markup=kb_pref, parse_mode='HTML',
+                                   disable_web_page_preview=True)
 
 @event.callback_query_handler(lambda c: c.data == 'settings_clear')
 async def settings(callback_query: types.CallbackQuery):
@@ -108,7 +129,7 @@ async def settings(callback_query: types.CallbackQuery):
     await bot.send_message(user_id, presets['settings'], reply_markup=keyboard.settings, parse_mode='HTML')
 
 @event.callback_query_handler(lambda c: c.data in ['-1', '1'])
-async def settings(callback_query: types.CallbackQuery):
+async def change_page(callback_query: types.CallbackQuery):
     user_id = callback_query.from_user.id
     msg_id = callback_query.message.message_id
     user_data = udb.get_user(user_id)
