@@ -53,9 +53,9 @@ async def settings(callback_query: types.CallbackQuery):
     for i in range(len(param_buttons)):
         check = user_data[i + 1]
         if check:
-            param_buttons[i].text = '✅︎' + btn_presets[sql_list[i + 1]]
+            param_buttons[i].text = '●' + btn_presets[sql_list[i + 1]]
         else:
-            param_buttons[i].text = '❎️' + btn_presets[sql_list[i + 1]]
+            param_buttons[i].text = '○️' + btn_presets[sql_list[i + 1]]
 
     if callback_query.data != 'settings':
         await bot.edit_message_reply_markup(user_id, msg_id, reply_markup=keyboard.settings)

@@ -31,9 +31,9 @@ class btn():
     inline_lexical = InlineKeyboardButton(btn_presets['lexical'], callback_data='dict_2')
     inline_encyclopedia = InlineKeyboardButton(btn_presets['encyclopedia'], callback_data='dict_3')
 
-    inline_left = InlineKeyboardButton('⬅️', callback_data='-1')
-    inline_right = InlineKeyboardButton('➡️', callback_data='1')
-    inline_settings_light = InlineKeyboardButton('🔘', callback_data='settings_clear')
+    inline_left = InlineKeyboardButton('❮', callback_data='-1')
+    inline_right = InlineKeyboardButton('❯', callback_data='1')
+    inline_settings_light = InlineKeyboardButton('⦿', callback_data='settings_clear')
 
 class format():
     bold = '<b>%s</b>'
