@@ -1,2 +1,1 @@
-worker: NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program 
-python3 setup.py
+worker: python3 setup.py
