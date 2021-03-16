@@ -1,1 +1,1 @@
-worker: python3 setup.py
+worker: newrelic-admin run-program python3 setup.py
