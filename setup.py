@@ -1,5 +1,7 @@
-import subprocess
+import subprocess, os
 from datetime import datetime
+
+os.system('NEW_RELIC_CONFIG_FILE=newrelic.ini newrelic-admin run-program')
 
 while True:
     try:
