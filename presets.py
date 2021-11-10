@@ -1,8 +1,8 @@
 from aiogram.types.inline_keyboard import *
 
 presets = {
-    'greeting': """*бот для slounik.org*
-<i>Адпраў слова на пераклад(бел -> ру)</i>\nАльбо перайдзі ў настройкі пошуку""",
+    'greeting': """~ ~ ~ * бот для slounik.org * ~ ~ ~
+<i>    Адпраў слова каб знайсці яго ў слоўніках</i>\nКаб змяніць параметры пошуку перайдзі ў настройкі""",
     'settings': """У якіх слоўніках шукаць?
     """
 }
@@ -35,7 +35,7 @@ class btn():
     inline_right = InlineKeyboardButton('❯', callback_data='1')
     inline_settings_light = InlineKeyboardButton('⦿', callback_data='settings_clear')
 
-class format():
+class format:
     bold = '<b>%s</b>'
     italic = '<i>%s</i>'
     underlined = '<u>%s</u>'
