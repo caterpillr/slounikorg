@@ -9,15 +9,21 @@ from config import api_token
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = input('enter telegram bot token : ')
 path = os.path.abspath("") + '/'
 
 try:
-    bot = Bot(token=API_TOKEN)
-    event = Dispatcher(bot)
-except Exception as e:
-    print(e)
-    print("\n Probably given token is not valid...")
+    API_TOKEN = os.environ['API_TOKEN']
+except Exception as ex:
+    try:
+        API_TOKEN = input('enter telegram bot token : ')
+        bot = Bot(token=API_TOKEN)
+        event = Dispatcher(bot)
+    except Exception as e:
+        print(e)
+        print("\n Probably given token is not valid...")
+        exit()
+    print(ex)
+    print("\n no token is stored in environment")
     exit()
 
 udb = db()
