@@ -5,8 +5,6 @@ from presets import presets, keyboard, btn, btn_presets
 from db import db
 from json import dumps, loads
 
-from config import api_token
-
 logging.basicConfig(level=logging.INFO)
 
 path = os.path.abspath("") + '/'
