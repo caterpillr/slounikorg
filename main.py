@@ -9,11 +9,16 @@ from config import api_token
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = api_token
+API_TOKEN = input('enter telegram bot token : ')
 path = os.path.abspath("") + '/'
 
-bot = Bot(token=API_TOKEN)
-event = Dispatcher(bot)
+try:
+    bot = Bot(token=API_TOKEN)
+    event = Dispatcher(bot)
+except Exception as e:
+    print(e)
+    print("\n Probably given token is not valid...")
+    exit()
 
 udb = db()
 sql_list = {'dict_0': 1, 'dict_1': 2, 'dict_2': 3, 'dict_3': 4, 'poshuk': 5,
