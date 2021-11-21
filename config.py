@@ -1,1 +1,0 @@
-api_token = '1362988591:AAGbfzJ0Fldywdhqtkz4BqO2gBZ9eh3IhwY'
