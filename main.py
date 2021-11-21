@@ -12,15 +12,11 @@ path = os.path.abspath("") + '/'
 try:
     API_TOKEN = os.environ['API_TOKEN']
 except Exception as ex:
-    try:
-        print('no token is stored in the environment')
-        API_TOKEN = input('enter telegram bot token : ')
-        bot = Bot(token=API_TOKEN)
-        event = Dispatcher(bot)
-    except Exception as e:
-        print(e)
-        print("\n Probably given token is not valid...")
-        exit()
+    print('no token is stored in the environment')
+    API_TOKEN = input('enter telegram bot token : ')
+
+bot = Bot(token=API_TOKEN)
+event = Dispatcher(bot)
 
 udb = db()
 sql_list = {'dict_0': 1, 'dict_1': 2, 'dict_2': 3, 'dict_3': 4, 'poshuk': 5,
